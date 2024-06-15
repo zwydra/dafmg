@@ -1,7 +1,7 @@
 import random
 from flask import Flask, render_template, jsonify
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 sals1 = ["Unsatisfied", "Naughty", "Dear", "Dearest", "Sweet"]
 sals2 = ["Master", "Sir", "Girl", "Slut", "You", "Y/N", "Sweetheart"]
@@ -67,5 +67,5 @@ def generate():
     new_love_letter = generate_love_letter()
     return jsonify({'letter': new_love_letter})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
